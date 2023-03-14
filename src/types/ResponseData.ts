@@ -1,3 +1,3 @@
-export default interface ResponseData {
+export interface ResponseData {
   data: any;
 }

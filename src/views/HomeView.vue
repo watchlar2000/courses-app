@@ -1,9 +1,10 @@
 <script setup lang="ts">
+import CoursesList from '@/components/CoursesList.vue';
 
 </script>
 
 <template>
-  <h1>
-    Home
-  </h1>
+  <div>
+    <courses-list />
+  </div>
 </template>

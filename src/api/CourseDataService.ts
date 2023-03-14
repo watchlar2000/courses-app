@@ -6,7 +6,7 @@ const generateToken = async (): Promise<string> => {
 };
 
 /*
-When App is first initiated, the generateToken function fires and returns a token, which will be used throught the App lifecycle to send http requests to the API
+When App is first initiated, the generateToken function fires and returns a token, which will be used thoughout the App lifecycle. This token is going to be used to send http requests to the API.
 */
 const token = await generateToken();
 

@@ -1,12 +1,10 @@
 <script setup lang="ts">
 import DefaultLayout from '@/layout/DefaultLayout.vue';
-import { onMounted } from 'vue';
-import CourseDataService from './api/CourseDataService';
+import { useCourseStore } from './store/course';
 
-onMounted(async () => {
-  const data = await CourseDataService.getAll();
-  console.log(data);
-})
+const courseStore = useCourseStore();
+courseStore.loadCourses();
+
 </script>
 
 <template>

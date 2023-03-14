@@ -15,9 +15,8 @@ import TheHeader from '@/components/TheHeader.vue';
 
 <style lang="scss" scoped>
 .container {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 18px;
-  background-color: rgba(255, 0, 0, 0.21);
   margin-inline: auto;
   max-width: 900px;
   display: grid;
