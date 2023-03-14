@@ -4,7 +4,7 @@ import TheHeader from '@/components/TheHeader.vue';
 </script>
 
 <template>
-  <div class="layout">
+  <div class="container">
     <the-header class="header" />
     <main class="main">
       <slot />
@@ -14,7 +14,7 @@ import TheHeader from '@/components/TheHeader.vue';
 </template>  
 
 <style lang="scss" scoped>
-.layout {
+.container {
   height: 100vh;
   padding: 0 18px;
   background-color: rgba(255, 0, 0, 0.21);
