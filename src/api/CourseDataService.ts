@@ -1,10 +1,10 @@
 import http from '@/http-common';
 
-const COURSES_URL = '/core/preview-courses';
-const AUTH_URL = '/auth/anonymous?platform=subscriptions';
+// const COURSES_URL = '/core/preview-courses';
+// const AUTH_URL = '/auth/anonymous?platform=subscriptions';
 
 const generateToken = async (): Promise<string> => {
-  const { data } = await http.get(AUTH_URL);
+  const { data } = await http.get(import.meta.env.VITE_APP_AUTH_URL);
   return data.token;
 };
 
@@ -16,11 +16,11 @@ const config = {
 
 class CourseDataService {
   getAll(): Promise<any> {
-    return http.get(COURSES_URL, config);
+    return http.get(import.meta.env.VITE_APP_COURSES_URL, config);
   }
 
   getCourse(id: string) {
-    return http.get(`${COURSES_URL}/${id}`, config);
+    return http.get(`${import.meta.env.VITE_APP_COURSES_URL}/${id}`, config);
   }
 }
 
