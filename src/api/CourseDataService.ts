@@ -1,13 +1,13 @@
 import http from '@/http-common';
 
-// const COURSES_URL = '/core/preview-courses';
-// const AUTH_URL = '/auth/anonymous?platform=subscriptions';
-
 const generateToken = async (): Promise<string> => {
   const { data } = await http.get(import.meta.env.VITE_APP_AUTH_URL);
   return data.token;
 };
 
+/*
+When App is first initiated, the generateToken function fires and returns a token, which will be used throught the App lifecycle to send http requests to the API
+*/
 const token = await generateToken();
 
 const config = {
