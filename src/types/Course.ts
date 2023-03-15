@@ -6,17 +6,31 @@ export interface Course {
   status: string;
   description: string;
   duration: number;
-  lessonsCount: number;
+  lessonsCount?: number;
   containsLockedLessons: boolean;
   previewImageLink: string;
   rating: number;
   meta: Meta;
-  courseVideoPreview: Preview;
+  courseVideoPreview?: Preview;
+  lessons?: Lesson[];
+}
+
+interface Lesson {
+  id: string;
+  title: string;
+  duration: number;
+  order: number;
+  type: string;
+  status: string;
+  link: string;
+  previewImageLink: string;
+  meta: null;
 }
 
 interface Meta {
   slug: string;
   skills: Array<string>;
+  courseVideoPreview?: Preview;
 }
 
 interface Preview {

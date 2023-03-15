@@ -4,7 +4,6 @@ import { useCourseStore } from './store/course';
 
 const courseStore = useCourseStore();
 courseStore.loadCourses();
-
 </script>
 
 <template>

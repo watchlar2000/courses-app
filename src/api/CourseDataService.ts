@@ -19,7 +19,7 @@ class CourseDataService {
     return http.get(import.meta.env.VITE_APP_COURSES_URL, config);
   }
 
-  getCourse(id: string) {
+  getCourseById(id: string): Promise<any> {
     return http.get(`${import.meta.env.VITE_APP_COURSES_URL}/${id}`, config);
   }
 }

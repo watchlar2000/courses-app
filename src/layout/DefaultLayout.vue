@@ -11,7 +11,7 @@ import TheHeader from '@/components/TheHeader.vue';
     </main>
     <the-footer class="footer" />
   </div>
-</template>  
+</template>
 
 <style lang="scss" scoped>
 .container {
@@ -21,11 +21,10 @@ import TheHeader from '@/components/TheHeader.vue';
   max-width: 900px;
   display: grid;
   grid-template-rows: 100px auto 65px;
-  grid-template-areas: 
-    "header"
-    "main"
-    "footer"
-  ;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
 }
 
 .header {
@@ -34,7 +33,6 @@ import TheHeader from '@/components/TheHeader.vue';
 
 .main {
   grid-area: main;
-  background-color: yellow;
 }
 
 .footer {
