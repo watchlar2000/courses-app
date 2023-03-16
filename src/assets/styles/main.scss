@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+@import './fonts.scss';
 @import './reset.scss';
 @import './base.scss';
 
@@ -6,12 +6,84 @@ body {
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
-  background-color: rgba(255, 0, 0, 0.21);
+  background-color: #c1d1e3;
   transition: color 0.5s, background-color 0.5s;
   line-height: 1.6;
-  font-family: Sanchez, sans-serif;
+  font-family: 'Sanchez', sans-serif;
   font-size: 18px;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  transition: all 0.05s ease;
+}
+
+a:link,
+a:visited {
+  color: hsl(212, 51%, 40%);
+}
+a:hover,
+a:focus {
+  color: #968360;
+  outline: none;
+}
+a:active {
+  color: hsl(212, 51%, 50%);
+}
+
+button {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  cursor: pointer;
+  background: hsl(0, 0%, 91%);
+  font: inherit;
+  padding: 8px 14px;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background: hsl(0, 0%, 80%);
+  }
+}
+
+.course-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  background-color: #fff0d6;
+  padding: 24px 36px;
+  margin-bottom: 36px;
+
+  .title {
+    font-family: 'Open Sans';
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+}
+
+.skills-list {
+  margin-top: 6px;
+}
+
+.category {
+  font-size: 22px;
+}
+
+.course-category {
+  display: flex;
+  gap: 22px;
+
+  .category {
+    padding: 8px 12px;
+    background-color: hsl(212, 51%, 40%);
+    color: #fff0d6;
+  }
+}
+
+.icon {
+  color: #5c5c5c;
 }

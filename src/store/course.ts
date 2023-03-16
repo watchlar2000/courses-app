@@ -57,6 +57,11 @@ export const useCourseStore = defineStore('course', {
 
       return this.loadCourseById(id);
     },
+    checkCurrentPage(page: number) {
+      if (this.page !== page) {
+        this.page = page;
+      }
+    },
   },
 
   getters: {
@@ -67,10 +72,13 @@ export const useCourseStore = defineStore('course', {
         return this.courses?.slice(0, coursesPerPage);
       }
 
-      const start = this.page * coursesPerPage;
-      const end = start - coursesPerPage;
+      const end = this.page * coursesPerPage;
+      const start = end - coursesPerPage;
 
       return this.courses?.slice(start, end);
+    },
+    totalPages(): number {
+      return Math.ceil(this.courses.length / Pagination.per_page);
     },
   },
 });
