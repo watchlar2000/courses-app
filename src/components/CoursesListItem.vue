@@ -31,4 +31,8 @@ const props = defineProps<{
   </div>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+.course-section {
+  height: 100%;
+}
+</style>

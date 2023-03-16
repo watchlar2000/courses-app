@@ -67,6 +67,10 @@ const back = () => {
 </template>
 
 <style scoped lang="scss">
+.course-section {
+  max-width: 900px;
+  margin-inline: auto;
+}
 .list {
   width: 100%;
   display: flex;

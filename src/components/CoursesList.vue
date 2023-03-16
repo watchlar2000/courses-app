@@ -22,8 +22,10 @@ watch(page, () => {
 
 <template>
   <div>
-    <div v-for="course in courseStore.paginate" :key="course.id">
-      <CoursesListItem :course="course" />
+    <div class="course-grid">
+      <div v-for="course in courseStore.paginate" :key="course.id">
+        <CoursesListItem :course="course" />
+      </div>
     </div>
     <the-pagination
       :total-pages="courseStore.totalPages"
@@ -34,3 +36,13 @@ watch(page, () => {
     />
   </div>
 </template>
+
+<style scoped lang="scss">
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+</style>

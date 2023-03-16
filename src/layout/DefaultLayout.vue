@@ -18,7 +18,7 @@ import TheHeader from '@/components/TheHeader.vue';
   min-height: 100vh;
   padding: 0 18px;
   margin-inline: auto;
-  max-width: 900px;
+  max-width: 1400px;
   display: grid;
   grid-template-rows: 125px auto 100px;
   grid-template-areas:
