@@ -51,17 +51,19 @@ button {
 .course-section {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   align-items: flex-start;
   background-color: #fff0d6;
-  padding: 24px 36px;
-  margin-bottom: 36px;
+  padding: 36px;
+  border-radius: 35px;
 
   .title {
     font-family: 'Open Sans';
     font-size: 32px;
     line-height: 1.2;
     font-weight: 700;
+    margin-top: -8px;
+    color: hsl(212, 51%, 50%);
   }
 }
 

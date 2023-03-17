@@ -40,9 +40,32 @@ watch(page, () => {
 <style scoped lang="scss">
 .course-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
   gap: 32px;
   margin-bottom: 32px;
+}
+
+/* @media screen and (min-width: 576px) {
+  .course-grid {
+    padding: 0 12px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .course-grid {
+    padding: 0 18px;
+  }
+} */
+
+@media screen and (min-width: 992px) {
+  .course-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .course-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>

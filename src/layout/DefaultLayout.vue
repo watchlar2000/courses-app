@@ -16,9 +16,8 @@ import TheHeader from '@/components/TheHeader.vue';
 <style lang="scss" scoped>
 .container {
   min-height: 100vh;
-  padding: 0 18px;
   margin-inline: auto;
-  max-width: 1400px;
+  max-width: 1200px;
   display: grid;
   grid-template-rows: 125px auto 100px;
   grid-template-areas:
@@ -35,6 +34,19 @@ import TheHeader from '@/components/TheHeader.vue';
   grid-area: main;
   display: grid;
   place-content: center;
+  margin: 0 12px;
+}
+
+@media screen and (min-width: 576px) {
+  .main {
+    margin: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .main {
+    margin: 0;
+  }
 }
 
 .footer {
