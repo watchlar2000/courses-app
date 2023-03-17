@@ -1,18 +1,24 @@
 <script setup lang="ts">
 import DefaultLayout from '@/layout/DefaultLayout.vue';
-import { useRoute } from 'vue-router';
+import { onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { useCourseStore } from './store/course';
 
+const { loadCourses, checkCurrentPage } = useCourseStore();
 const route = useRoute();
-const courseStore = useCourseStore();
+const router = useRouter();
 
-const { page } = route.query;
+onMounted(async () => {
+  await router.isReady();
+  console.log(route.query.page);
+  const { page } = route.query;
 
-if (page !== undefined && page !== null) {
-  courseStore.checkCurrentPage(+page);
-}
+  if (page !== undefined && page !== null) {
+    checkCurrentPage(+page);
+  }
+});
 
-courseStore.loadCourses();
+loadCourses();
 </script>
 
 <template>
