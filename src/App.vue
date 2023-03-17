@@ -8,8 +8,6 @@ const courseStore = useCourseStore();
 
 const { page } = route.query;
 
-console.log(page);
-
 if (page !== undefined && page !== null) {
   courseStore.checkCurrentPage(+page);
 }

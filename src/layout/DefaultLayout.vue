@@ -33,6 +33,8 @@ import TheHeader from '@/components/TheHeader.vue';
 
 .main {
   grid-area: main;
+  display: grid;
+  place-content: center;
 }
 
 .footer {

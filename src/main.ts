@@ -9,9 +9,7 @@ import './assets/styles/main.scss';
 
 const app = createApp(App);
 
-app.use(createPinia());
-app.use(router);
-app.component('font-awesome-icon', FontAwesomeIcon);
+app.use(createPinia()).use(router).component('font-awesome-icon', FontAwesomeIcon);
 
 router.isReady().then(() => {
   app.mount('#app');
