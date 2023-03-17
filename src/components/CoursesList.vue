@@ -45,18 +45,6 @@ watch(page, () => {
   margin-bottom: 32px;
 }
 
-/* @media screen and (min-width: 576px) {
-  .course-grid {
-    padding: 0 12px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .course-grid {
-    padding: 0 18px;
-  }
-} */
-
 @media screen and (min-width: 992px) {
   .course-grid {
     grid-template-columns: repeat(2, 1fr);
