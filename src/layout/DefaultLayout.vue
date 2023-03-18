@@ -5,7 +5,7 @@ import TheHeader from '@/components/TheHeader.vue';
 
 <template>
   <div class="container">
-    <the-header class="header" />
+    <the-header class="header" title="Courses app" />
     <main class="main">
       <slot />
     </main>
@@ -41,12 +41,6 @@ import TheHeader from '@/components/TheHeader.vue';
 @media screen and (min-width: 576px) {
   .main {
     margin: 0 24px;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .main {
-    margin: 0;
   }
 }
 

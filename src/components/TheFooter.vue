@@ -1,7 +1,7 @@
 <script setup lang="ts">
-function fullYear() {
+const fullYear = () => {
   return new Date().getFullYear();
-}
+};
 </script>
 
 <template>

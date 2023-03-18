@@ -1,16 +1,16 @@
 <template>
-  <h3 class="error">
-    <span class="title">Ooops...</span> |
+  <div class="error">
+    <h2 class="title">Ooops...</h2>
     <slot />
-  </h3>
+  </div>
 </template>
 
 <style lang="scss" scoped>
 .error {
-  font-size: 24px;
-}
-.title {
-  font-weight: 600;
-  color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 </style>
