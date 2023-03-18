@@ -112,6 +112,7 @@ const onClickLastPage = () => {
 
 <style lang="scss" scoped>
 .pagination {
+  font-size: 16px;
   display: flex;
   gap: 12px;
   justify-content: center;
@@ -119,6 +120,12 @@ const onClickLastPage = () => {
   .active {
     background-color: var(--primary);
     color: var(--color-background-secondary);
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .pagination {
+    font-size: 20px;
   }
 }
 </style>

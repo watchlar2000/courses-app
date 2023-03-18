@@ -11,7 +11,11 @@
 
 <style lang="scss" scoped>
 .loader {
-  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
   font-size: 28px;
   color: var(--primary-50);
 }

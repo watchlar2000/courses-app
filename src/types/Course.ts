@@ -15,7 +15,7 @@ export interface Course {
   lessons?: Lesson[];
 }
 
-interface Lesson {
+export interface Lesson {
   id: string;
   title: string;
   duration: number;
@@ -37,4 +37,9 @@ interface Preview {
   link: string;
   duration: number;
   previewImageLink: string;
+}
+
+export interface LessonError {
+  message: string;
+  lessonId: string;
 }

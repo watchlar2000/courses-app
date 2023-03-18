@@ -30,12 +30,12 @@ import TheHeader from '@/components/TheHeader.vue';
 }
 
 .main {
+  align-self: self-start;
   grid-area: main;
   display: grid;
-  place-content: center;
   margin: 0 12px;
   max-width: 1600px;
-  /* background-color: red; */
+  height: 100%;
 }
 
 @media screen and (min-width: 576px) {
