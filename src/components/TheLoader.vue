@@ -13,7 +13,7 @@
 .loader {
   align-self: center;
   font-size: 28px;
-  color: hsl(212, 51%, 50%);
+  color: var(--primary-50);
 }
 .blob-container {
   margin-top: 12px;
@@ -23,9 +23,9 @@
 }
 
 .blob {
-  background: hsl(212, 51%, 40%);
+  background: var(--primary);
   border-radius: 50%;
-  box-shadow: hsl(212, 51%, 40%);
+  box-shadow: var(--primary);
   height: 16px;
   width: 16px;
   transform: scale(1);
@@ -34,18 +34,18 @@
 
 @keyframes pulse-black {
   0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 var(--color-black-50);
   }
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 12px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 12px var(--color-black-0);
   }
 
   100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 var(--color-black-0);
   }
 }
 </style>

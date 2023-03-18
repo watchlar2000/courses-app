@@ -117,8 +117,8 @@ const onClickLastPage = () => {
   justify-content: center;
 
   .active {
-    background-color: hsl(212, 51%, 40%);
-    color: white;
+    background-color: var(--primary);
+    color: var(--color-background-secondary);
   }
 }
 </style>

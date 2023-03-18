@@ -12,6 +12,7 @@ export const useCourseStore = defineStore('course', {
     ({
       courses: [],
       detailedCourses: [],
+      selectedCourse: {},
       page: 1,
       loading: false,
       error: false,
@@ -48,14 +49,16 @@ export const useCourseStore = defineStore('course', {
         this.loading = false;
       }
     },
-    async findDetailedCourseById(id: string): Promise<Course> {
+    async findDetailedCourseById(id: string): Promise<any> {
       const courseData = this.detailedCourses.find((course) => course.id === id);
 
       if (courseData !== undefined) {
-        return courseData;
+        this.selectedCourse = courseData;
+        return;
       }
 
-      return this.loadCourseById(id);
+      this.selectedCourse = await this.loadCourseById(id);
+      return;
     },
     checkCurrentPage(page: number) {
       if (this.page !== page) {

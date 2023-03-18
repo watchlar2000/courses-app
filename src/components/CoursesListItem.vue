@@ -20,7 +20,7 @@ const props = defineProps<{
         Rating: <span>{{ course.rating }}</span>
       </p>
     </div>
-    <div class="skills">
+    <div class="skills" v-show="course.meta.skills !== undefined">
       <h4 class="category">Skills:</h4>
       <ul class="skills-list">
         <li v-for="(skill, idx) in course.meta.skills" :key="idx">
@@ -34,5 +34,6 @@ const props = defineProps<{
 <style lang="scss" scoped>
 .course-section {
   height: 100%;
+  transition: all 0.1s ease;
 }
 </style>
