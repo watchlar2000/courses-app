@@ -51,7 +51,7 @@ watch(page, () => {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1600px) {
   .course-grid {
     grid-template-columns: repeat(3, 1fr);
   }
