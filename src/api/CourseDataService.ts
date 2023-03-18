@@ -1,8 +1,13 @@
 import http from '@/http-common';
 
 const generateToken = async (): Promise<string> => {
-  const { data } = await http.get(import.meta.env.VITE_APP_AUTH_URL);
-  return data.token;
+  try {
+    const { data } = await http.get(import.meta.env.VITE_APP_AUTH_URL);
+    return data.token;
+  } catch (e: unknown) {
+    const typedError = e as Error;
+    return typedError.message;
+  }
 };
 
 /*

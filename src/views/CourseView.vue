@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import TheError from '@/components/TheError.vue';
 import TheLoader from '@/components/TheLoader.vue';
 import { useCourseStore } from '@/store/course';
 import { storeToRefs } from 'pinia';
@@ -6,7 +7,7 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const courseStore = useCourseStore();
-const { loading, selectedCourse } = storeToRefs(courseStore);
+const { loading, selectedCourse, error, errorMessage } = storeToRefs(courseStore);
 
 const back = () => {
   router.push({ name: 'home' });
@@ -16,7 +17,8 @@ const back = () => {
 <template>
   <div>
     <the-loader v-if="loading" />
-    <div class="course-section" v-if="!loading">
+    <the-error v-else-if="error">{{ errorMessage }}</the-error>
+    <div class="course-section" v-else>
       <button @click="back" class="button-back">
         <span><font-awesome-icon icon="arrow-left" /></span> Back
       </button>
