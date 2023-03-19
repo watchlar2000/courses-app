@@ -8,7 +8,7 @@ To build the front end, I used vue 3, vue router, pinia, and typescript, and som
 
 ## Project Setup
 
-$${\color{orange}Please note that there is a need to use "--force" to resolve a problem related to @videojs-player/vue.}$$
+ <h1 style="color:red;">Please note that there is a need to use "--force" to resolve a problem related to @videojs-player/vue.</h1>
 
 ```sh
 npm install --force
