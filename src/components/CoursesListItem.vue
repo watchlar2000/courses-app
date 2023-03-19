@@ -14,7 +14,6 @@ const props = defineProps<{
       }}</router-link>
     </h2>
     <img :src="`${props.course.previewImageLink}/cover.webp`" :alt="props.course.title" />
-    <!-- <video-player :poster="`${props.course.previewImageLink}/cover.webp`"></video-player> -->
     <div class="course-category">
       <p class="category">{{ course.lessonsCount }} lessons</p>
       <p class="category">

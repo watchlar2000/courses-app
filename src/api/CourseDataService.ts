@@ -17,6 +17,7 @@ const token = await generateToken();
 
 const config = {
   headers: { Authorization: `Bearer ${token}` },
+  'Access-Control-Allow-Origin': 'DELETE',
 };
 
 class CourseDataService {
