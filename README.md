@@ -6,9 +6,7 @@ To build the front end, I used vue 3, vue router, pinia, and typescript, and som
 
 ## Recommended IDE Setup
 
-## Project Setup
-
- <h2>Please note that there is a need to use "--force" to resolve a problem related to @videojs-player/vue.</h2>
+## Project Setup _(Please include **"--force"** to resolve a problem regarding @videojs-player/vue.)_
 
 ```sh
 npm install --force
