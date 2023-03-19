@@ -1,6 +1,6 @@
 # courses-app
 
-What you are looking at is a Vuejs 3 app which I've called "Courses App". There are two pages. One displays the list of all available courses. Click on the course you like the most and go to the course detail page where you can find the lessons with the video attached.
+What you are looking at is a Vuejs 3 app which I've called "Courses App". There are two pages. One displays the list of all available courses. Click on the course you like the most and go to the course detail page where you can find the lessons with the videos attached.
 
 To build the front end, I used vue 3, vue router, pinia, and typescript, and some imagination to make it look good. The data is fetched from the API provided by Genesis.
 
