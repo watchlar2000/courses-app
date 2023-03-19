@@ -17,6 +17,7 @@ const videoSource = reactive({
 <template>
   <div v-if="props.src === ''">Loading..</div>
   <video-player
+    autoplay
     class="video-player vjs-theme-forest"
     :poster="poster"
     crossorigin="anonymous"
