@@ -21,7 +21,6 @@ const videoSource = reactive({
     class="video-player vjs-theme-forest"
     :poster="poster"
     crossorigin="anonymous"
-    playsinline
     controls
     :sources="[videoSource]"
   />
