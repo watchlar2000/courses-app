@@ -3,8 +3,8 @@ import { useCourseStore } from '@/store/course';
 import { storeToRefs } from 'pinia';
 import { watch } from 'vue';
 import { useRouter } from 'vue-router';
+import BasePagination from './BasePagination.vue';
 import CoursesListItem from './CoursesListItem.vue';
-import ThePagination from './ThePagination.vue';
 
 const courseStore = useCourseStore();
 const { page } = storeToRefs(courseStore);
@@ -23,11 +23,14 @@ watch(page, () => {
 <template>
   <div>
     <div class="course-grid">
-      <div v-for="course in courseStore.paginate" :key="course.id">
+      <div
+        v-for="course in courseStore.paginate"
+        :key="course.id"
+      >
         <CoursesListItem :course="course" />
       </div>
     </div>
-    <the-pagination
+    <base-pagination
       :total-pages="courseStore.totalPages"
       :per-page="10"
       :current-page="courseStore.page"

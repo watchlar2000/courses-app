@@ -9,15 +9,15 @@ enum Pagination {
 
 export const useCourseStore = defineStore('course', {
   state: () =>
-    ({
-      courses: [],
-      detailedCourses: [],
-      selectedCourse: {},
-      page: 1,
-      loading: false,
-      error: false,
-      errorMessage: '',
-    } as CourseRootState),
+  ({
+    courses: [],
+    detailedCourses: [],
+    selectedCourse: {},
+    page: 1,
+    loading: false,
+    error: false,
+    errorMessage: '',
+  } as CourseRootState),
 
   actions: {
     async loadCourses() {
@@ -29,7 +29,6 @@ export const useCourseStore = defineStore('course', {
         const typedError = e as Error;
         this.error = true;
         this.errorMessage = typedError.message;
-        console.log(e);
       } finally {
         this.loading = false;
       }
@@ -44,7 +43,6 @@ export const useCourseStore = defineStore('course', {
         const typedError = e as Error;
         this.error = true;
         this.errorMessage = typedError.message;
-        console.log(e);
       } finally {
         this.loading = false;
       }

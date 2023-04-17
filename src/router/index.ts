@@ -9,6 +9,24 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Home',
     },
+    async beforeEnter(to, next) {
+      const { loadCourses, courses, checkCurrentPage } = useCourseStore();
+
+      const { page } = to.query;
+
+      if (page !== undefined && page !== null) {
+        checkCurrentPage(+page);
+      }
+
+      try {
+        if (courses.length === 0) {
+          loadCourses();
+        }
+        next;
+      } catch (e) {
+        console.log(e);
+      }
+    }
   },
   {
     path: '/course/:id',
@@ -17,13 +35,25 @@ const routes: Array<RouteRecordRaw> = [
     meta: {
       title: 'Course',
     },
+    async beforeEnter(to, next) {
+      const { findDetailedCourseById } = useCourseStore();
+
+      const id = to.params.id as string;
+
+      try {
+        await findDetailedCourseById(id);
+        next;
+      } catch (e) {
+        console.log(e);
+      }
+    }
   },
   {
     path: '/:pathMatch(.*)*',
-    name: 'not-found',
+    name: '404',
     component: () => import('@/views/NotFoundView.vue'),
     meta: {
-      title: 'Not found',
+      title: '404',
     },
   },
 ];
@@ -41,21 +71,6 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const { courses, checkCurrentPage, loadCourses, findDetailedCourseById } = useCourseStore();
-  const { name } = to;
-  const id = to.params.id as string;
-  const { page } = to.query;
-
-  if (page !== undefined && page !== null) {
-    checkCurrentPage(+page);
-  }
-
-  if (name === 'home' && courses.length === 0) {
-    loadCourses();
-  } else if (name === 'course' && id !== undefined) {
-    findDetailedCourseById(id);
-  }
-
   window.document.title = `${to.meta.title}`;
   next();
 });

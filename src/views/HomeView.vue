@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import BaseError from '@/components/BaseError.vue';
+import BaseLoader from '@/components/BaseLoader.vue';
 import CoursesList from '@/components/CoursesList.vue';
-import TheError from '@/components/TheError.vue';
-import TheLoader from '@/components/TheLoader.vue';
 import { useCourseStore } from '@/store/course';
 import { storeToRefs } from 'pinia';
 
@@ -11,8 +11,8 @@ const { loading, error, errorMessage } = storeToRefs(courseStore);
 
 <template>
   <div>
-    <the-loader v-if="loading" />
-    <the-error v-else-if="error">{{ errorMessage }}</the-error>
+    <base-loader v-if="loading" />
+    <base-error v-else-if="error">{{ errorMessage }}</base-error>
     <courses-list v-else />
   </div>
 </template>

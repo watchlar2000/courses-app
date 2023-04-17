@@ -1,15 +1,18 @@
 <script setup lang="ts">
-import TheFooter from '@/components/TheFooter.vue';
-import TheHeader from '@/components/TheHeader.vue';
+import BaseFooter from '@/components/BaseFooter.vue';
+import BaseHeader from '@/components/BaseHeader.vue';
 </script>
 
 <template>
   <div class="container">
-    <the-header class="header" title="Courses app" />
+    <base-header
+      class="header"
+      title="Courses app"
+    />
     <main class="main">
       <slot />
     </main>
-    <the-footer class="footer" />
+    <base-footer class="footer" />
   </div>
 </template>
 
