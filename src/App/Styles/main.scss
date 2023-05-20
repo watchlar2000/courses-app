@@ -1,0 +1,78 @@
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  line-height: 1.6;
+  font-family: 'Sanchez', sans-serif;
+  font-size: 22px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  transition: all 0.05s ease;
+}
+
+a:link,
+a:visited {
+  color: var(--primary);
+}
+
+a:hover,
+a:focus {
+  color: var(--secondary);
+  outline: none;
+}
+
+a:active {
+  color: var(--primary-50);
+}
+
+button {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  cursor: pointer;
+  background: var(--color-background-secondary);
+  font: inherit;
+  padding: 8px 14px;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background: var(--color-background-secondary-80);
+  }
+}
+
+.course-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  background-color: var(--color-background-variant);
+  padding: 36px;
+  border-radius: 35px;
+}
+
+.skills-list {
+  margin-top: 6px;
+}
+
+.category {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.category.title {
+  font-weight: 600;
+}
+
+.course-category {
+  display: flex;
+  gap: 22px;
+
+  .category {
+    padding: 8px 12px;
+    background-color: var(--primary);
+    color: var(--color-background-variant);
+  }
+}

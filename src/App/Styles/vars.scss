@@ -1,0 +1,42 @@
+:root {
+  --color-text: hsl(180, 1%, 23%);
+  --primary: hsl(212, 51%, 40%);
+  --primary-50: hsl(212, 51%, 50%);
+  --primary-75: hsl(212, 51%, 35%, 0.25);
+  --secondary: hsl(39, 22%, 40%);
+  --color-background: hsl(212, 38%, 82%);
+  --color-background-72: hsl(212, 38%, 72%);
+  --color-background-85: hsl(212, 38%, 85%);
+  --color-background-variant: hsl(38, 100%, 92%);
+
+  --color-background-alt: hsl(60, 27%, 62%);
+
+  --color-background-secondary: hsl(0, 0%, 91%);
+  --color-background-secondary-80: hsl(0, 0%, 85%);
+
+  --color-black-0: hsla(0, 0%, 50%);
+  --color-black-50: hsla(0, 0%, 0%, 0.498);
+
+  --color-danger: hsl(0, 81%, 35%);
+}
+
+:root.dark-theme {
+  --color-text: hsl(0, 0%, 85%);
+  --primary: hsl(212, 54%, 64%);
+  --primary-50: hsl(212, 51%, 50%);
+  --secondary: hsl(212, 51%, 55%);
+  --color-background: hsl(0, 1%, 15%);
+  --color-background-72: hsl(0, 1%, 10%);
+  --color-background-85: hsl(0, 1%, 20%);
+  --color-background-variant: hsl(0, 1%, 21%);
+
+  --color-background-alt: hsl(0, 0%, 30%);
+
+  --color-background-secondary: hsl(0, 0%, 50%);
+  --color-background-secondary-80: hsl(0, 0%, 85%);
+
+  --color-black-0: hsl(0, 0%, 30%);
+  --color-black-50: hsl(0, 0%, 50%);
+
+  --color-danger: hsl(0, 81%, 35%);
+}

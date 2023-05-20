@@ -2,16 +2,20 @@
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
   "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
     "types": ["node"]
   },
-
   "references": [
     {
       "path": "./tsconfig.node.json"
     }
-  ]
+  ],
+  "exclude": ["dist", "node_modules"]
 }
