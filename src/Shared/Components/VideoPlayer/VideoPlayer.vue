@@ -31,19 +31,14 @@ const onError = () => {
     ref="player"
     :poster="poster"
     :sources="[videoSource]"
-    class="video-player"
+    class="video-player video-js vjs-default-skin vjs-16-9"
+    data-setup='{"fluid": true}'
     crossorigin="anonymous"
     @error="onError"
   />
 </template>
 
 <style lang="scss">
-.video-js {
-  position: relative !important;
-  width: 100% !important;
-  height: 370px;
-}
-
 .video-js .vjs-control-bar {
   height: 48px;
 }
@@ -71,5 +66,9 @@ const onError = () => {
 
 .video-js .vjs-volume-panel .vjs-volume-control.vjs-volume-horizontal {
   align-self: center;
+}
+
+.vjs-poster {
+  background-size: cover;
 }
 </style>

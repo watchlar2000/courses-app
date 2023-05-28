@@ -4,9 +4,15 @@
 
 <style lang="scss" scoped>
 .title {
-  font-size: 48px;
+  font-size: 36px;
   font-family: 'Open Sans';
   font-weight: 700;
   pointer-events: none;
+}
+
+@media screen and (min-width: 576px) {
+  .title {
+    font-size: 40px;
+  }
 }
 </style>

@@ -1,7 +1,7 @@
 import { mount } from '@vue/test-utils';
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import ThemeSwitcher from '..';
-import { Theme, ThemeIcon } from '../Lib/types';
+import { THEME_ICONS, THEME_MODES, themeModes } from '../Lib/consts';
 
 describe('ThemeSwitcher', () => {
   let wrapper;
@@ -16,32 +16,18 @@ describe('ThemeSwitcher', () => {
   });
 
   it('renders properly', async () => {
-    expect(wrapper.vm.userTheme).toBe(Theme.Light);
-    expect(wrapper.vm.icon).toBe(ThemeIcon.Light);
-    expect(wrapper.find('.icon').text()).toMatch(ThemeIcon.Light);
+    expect(wrapper.vm.userTheme).toBe(THEME_MODES.light);
+    expect(wrapper.vm.displayIcon).toBe(THEME_ICONS.light);
+    expect(wrapper.find('.icon').text()).toMatch(THEME_ICONS.light);
   });
 
-  it('sets initial userTheme value to light-theme if there is no userTheme data in local storage', async () => {
-    expect(wrapper.vm.userTheme).toBe(Theme.Light);
+  it('sets initial userTheme value to the first element of the provided theme array if there is no userTheme data in local storage', async () => {
+    expect(wrapper.vm.userTheme).toBe(themeModes[0]);
   });
 
-  it('has icon computed function which works properly ', async () => {
-    expect(wrapper.vm.icon).toBe(ThemeIcon.Light);
-
-    await wrapper.find('.icon').trigger('click');
-
-    expect(wrapper.vm.icon).toBe(ThemeIcon.Dark);
-  });
-
-  it('has toggleTheme function which works properly ', async () => {
-    const toggleSpy = vi.spyOn(wrapper.vm, 'toggleTheme');
-
-    expect(wrapper.vm.userTheme).toBe(Theme.Light);
-
-    await wrapper.vm.toggleTheme();
-
-    expect(toggleSpy).toHaveBeenCalled();
-
-    expect(wrapper.vm.icon).toBe(ThemeIcon.Dark);
+  it('has displayIcon computed function which works properly ', async () => {
+    expect(wrapper.vm.displayIcon).toMatch(THEME_ICONS.light);
+    wrapper.vm.userTheme = themeModes[1];
+    expect(wrapper.vm.displayIcon).toMatch(THEME_ICONS.dark);
   });
 });

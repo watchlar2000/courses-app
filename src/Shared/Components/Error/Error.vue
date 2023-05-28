@@ -16,7 +16,7 @@ const generateErrorMessage = computed(() => {
       errorMessage = 'Invalid authentication credentials';
       break;
     default:
-      errorMessage = 'Please check your internet connection';
+      errorMessage = 'Something went wrong';
   }
 
   return errorMessage;

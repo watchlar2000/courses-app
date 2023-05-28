@@ -47,14 +47,16 @@ defineExpose({ toCourse, imageSource, areSkillsPresented });
         {{ title }}
       </router-link>
     </card-header>
-    <video-player
-      :src="video"
-      :poster="imageSource"
-      :autoplay="isVideoPlaying && isVideoSupported"
-      @source-error="handleVideoError"
-      @mouseenter="playVideo"
-      @mouseleave="stopVideo"
-    />
+    <div class="video">
+      <video-player
+        :src="video"
+        :poster="imageSource"
+        :autoplay="isVideoPlaying && isVideoSupported"
+        @source-error="handleVideoError"
+        @mouseenter="playVideo"
+        @mouseleave="stopVideo"
+      />
+    </div>
     <div class="course-category">
       <course-category>{{ lessonsCount }} lessons</course-category>
       <course-category
@@ -75,5 +77,10 @@ defineExpose({ toCourse, imageSource, areSkillsPresented });
 .course-section {
   height: 100%;
   transition: all 0.1s ease;
+
+  .video {
+    height: auto;
+    width: 100%;
+  }
 }
 </style>

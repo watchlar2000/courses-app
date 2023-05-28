@@ -71,10 +71,4 @@ defineExpose({ isLessonLocked, hasError });
     color: inherit;
   }
 }
-
-.error {
-  color: var(--color-danger);
-  font-size: 18px;
-  margin-top: 14px;
-}
 </style>

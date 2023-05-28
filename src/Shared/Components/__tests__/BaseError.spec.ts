@@ -14,6 +14,6 @@ describe('BaseError', () => {
 
   it('renders default text when component is created without specified slot text', () => {
     const wrapper = shallowMount(BaseError);
-    expect(wrapper.text()).toMatch('Please check your internet connection');
+    expect(wrapper.text()).toMatch('Something went wrong');
   });
 });

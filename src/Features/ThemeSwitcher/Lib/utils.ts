@@ -1,10 +1,9 @@
-import { Theme } from './types';
+import type { ThemesList } from './types';
 
-export const setTheme = (theme: string): void => {
-  localStorage.setItem(Theme.User, theme);
-  document.documentElement.className = theme;
-};
-
-export const getTheme = (): string | null => {
-  return localStorage.getItem(Theme.User);
+export const getCurrentIcon = (
+  themes: ThemesList[],
+  currentThemeMode: string | null,
+): string | undefined => {
+  const themeData = themes.find((t) => t.mode === currentThemeMode);
+  return themeData?.icon;
 };

@@ -2,7 +2,7 @@
 
 What you are looking at is a Vuejs 3 app which I've called "Courses App". There are two pages. One displays the list of all available courses and another one reflects all the detailed information about the particular course. Click on the course you'd like to dive into the most and go to the course detail page where you can find the lessons with the videos attached.
 
-![Courses App]('./public/img/courses-app.png')
+[Live Demo](https://courses-app-beta.vercel.app/)
 
 ## Tech Stack
 
