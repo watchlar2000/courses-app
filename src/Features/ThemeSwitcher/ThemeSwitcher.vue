@@ -6,15 +6,10 @@ import { getCurrentIcon } from './Lib/utils';
 
 const themeService = new ThemeService(themeModes);
 
-const userTheme = ref<string | null>(null);
+const userTheme = ref<string>('');
 
 const displayIcon = computed(() => {
   const icon = getCurrentIcon(THEMES_LIST, userTheme.value);
-
-  if (!icon) {
-    return userTheme.value?.slice(0, 1);
-  }
-
   return icon;
 });
 

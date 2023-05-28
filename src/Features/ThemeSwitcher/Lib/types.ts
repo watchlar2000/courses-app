@@ -1,4 +1,4 @@
 export interface ThemesList {
   mode: string;
-  icon?: string;
+  icon: string;
 }
